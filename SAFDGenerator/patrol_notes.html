@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFD Forum Generator</title>
+    <link rel="icon" href="assets/safd.png" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-other navbar-expand-sm">
+
+            <div class="container">
+                <a href="home.html" class="text-decoration-none">
+                    <h1 class="d-inline-block align-top mr-4 text-white font-weight-bold">SAFD</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse"
+                    aria-controls="contain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Hospital Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_information.html">Patient Information</a>
+                                    <a class="dropdown-item" href="asgh_prescription.html">Prescription</a>
+                                    <a class="dropdown-item" href="surgery_report.html">Surgery Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Fire Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_care_report.html">Patient Care Report</a>
+                                    <a class="dropdown-item" href="patrol_notes.html">Patrol Notes</a>
+                                    <a class="dropdown-item" href="fire_report.html">Fire Report</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col">
+                <div class="font-weight-bold mb-3 d-flex flex-wrap pb-2">
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <div class="m-1">
+                        <a class="btn btn-sm btn-primary" href="home.html">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header text-center text-white" style="background-color: #e4bc4b;">PATROL NOTES</h5>
+                    <div class="card-body">
+                        <form id="patrol_form">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="name" class="col-sm-3 col-form-label text-sm-left">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="position"
+                                            class="col-sm-3 col-form-label text-sm-left">Position</label>
+                                        <div class="col-sm-9">
+                                            <select id="position" name="position" class="form-control" required>
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Fire Cadet">Fire Cadet</option>
+                                                <option value="Junior Firefighter">Junior Firefighter</option>
+                                                <option value="Senior Firefighter">Senior Firefighter</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="empnumber" class="col-sm-3 col-form-label text-sm-left">Employee
+                                            #</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="empnumber" name="empnumber" class="form-control"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="unit" class="col-sm-3 col-form-label text-sm-left">Unit</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="unit" name="unit" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="crew_member" class="col-sm-3 col-form-label text-sm-left">Crew
+                                            Member</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="crew_member" name="crew_member" class="form-control" placeholder="e.g. Candidate Harry Ford">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="patrol_date"
+                                            class="col-sm-3 col-form-label text-sm-left">Date</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="patrol_date" name="patrol_date" class="form-control"
+                                                required placeholder="dd/mm/yyyy">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="on_shift_time" class="col-sm-3 col-form-label text-sm-left">Start On
+                                            Shift</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="on_shift_time" name="on_shift_time"
+                                                class="form-control" required placeholder="hh:mm">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="on_shift_img" class="col-sm-3 col-form-label text-sm-left">On Shift
+                                            Image Link</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="on_shift_img" name="on_shift_img"
+                                                class="form-control" required placeholder="Link without [img][/img]">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="off_shift_time" class="col-sm-3 col-form-label text-sm-left">Start
+                                            Off Shift</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="off_shift_time" name="off_shift_time"
+                                                class="form-control" required placeholder="hh:mm">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="on_shift_img" class="col-sm-3 col-form-label text-sm-left">Off Shift
+                                            Image Link</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="off_shift_img" name="off_shift_img"
+                                                class="form-control" placeholder="Link without [img][/img]" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="patrol_details" class="col-sm-2 col-form-label text-sm-left">Details</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" id="patrol_details" name="patrol_details" cols="80" rows="5"
+                                        class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="sign" class="col-sm-2 col-form-label text-sm-left">Signature Link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="sign" name="sign" class="form-control"
+                                    placeholder="Put [i]Signature[/i] or [img]Signature Link[/img]">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 text-center">
+                                <div class="col-md-12">
+                                    <a href="#input_result" id="generate"
+                                        class="btn btn-block text-white font-weight-bold"
+                                        style="background-color: #d82832;">
+                                        GENERATE
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-0 mb-sm-3 mx-5" id="input_result">
+            <label for="result" class="col-sm-2 col-form-label text-sm-left">Result</label>
+            <div class="col-sm-10">
+                <textarea type="text" id="result" name="result" cols="80" rows="5" class="form-control"
+                    required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fluid-container text-center py-3 text-white" id="features" style="background-color: #d82832">
+            <p>© Copyright 2020 by ChrisAndreS</p>
+        </div>
+
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#generate").click(function () {
+            var name = $("#name").val();
+            var position = $("#position").val();
+            var empnumber = $("#empnumber").val();
+            var unit = $("#unit").val();
+            var crew_member = $("#crew_member").val();
+            var patrol_date = $("#patrol_date").val();
+            var on_shift_time = $("#on_shift_time").val();
+            var on_shift_img = $("#on_shift_img").val();
+            var off_shift_time = $("#off_shift_time").val();
+            var off_shift_img = $("#off_shift_img").val();
+            var patrol_details = $("#patrol_details").val();
+            var sign = $("#sign").val();
+
+            if (crew_member == "" || crew_member == "-" || crew_member == "None" || crew_member ==
+                "none" || crew_member == "NONE") {
+                crew_member = "N/A";
+            }
+
+            var notes =
+                "[divbox=white][center][img]https://i.postimg.cc/RFd9JsR5/safdjg-2020-resized-2.png[/img]\n[size=150][b][font=times new roman]SAN ANDREAS FIRE DEPARTMENT[/font][/b][/size]\n[font=times new roman]EMERGENCY AND OPERATIVE OPERATIONS OFFICE[/font] - [font=times new roman]FIELD RECORDS[/font]\n[font=times new roman]CITY OF LOS SANTOS * 271 AIRPORT PERIMETER WAY* LOS SANTOS SA 52527[/font][/center]\n[hr][/hr]\n[center][size=140][b][font=times new roman]PATROL NOTES[/font][/b][/size][/center]\n[hr][/hr]\n[b]Name :[/b] " +
+                name + "\n[b]Position :[/b] " + position + "\n[b]Employee #:[/b] " + empnumber +
+                "\n[b]Unit :[/b] " + unit + "\n[b]Crew member :[/b] " + crew_member +
+                "\n[b]Date :[/b] " + patrol_date + "\n[b]Start on shift:[/b] " + on_shift_time +
+                "\n[spoiler][img]" + on_shift_img + "[/img][/spoiler]\n[b]Start off shift:[/b] " +
+                off_shift_time + "\n[spoiler][img]" + off_shift_img +
+                "[/img][/spoiler]\n[b]DETAILS:[/b]\n[quote]" + patrol_details +
+                "[/quote]\n[space][/space]\n[b]EMPLOYEE SIGNATURE[/b]\n" + sign +
+                "\n______________________\n" + position + " " + name + "[/divbox]";
+
+            $("#result").text(notes);
+
+        })
+
+    })
+</script>
+
+</html>

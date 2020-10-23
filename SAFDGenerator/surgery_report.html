@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFD Forum Generator</title>
+    <link rel="icon" href="assets/safd.png" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-other navbar-expand-sm">
+
+            <div class="container">
+                <a href="home.html" class="text-decoration-none">
+                    <h1 class="d-inline-block align-top mr-4 text-white font-weight-bold">SAFD</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse"
+                    aria-controls="contain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Hospital Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_information.html">Patient Information</a>
+                                    <a class="dropdown-item" href="asgh_prescription.html">Prescription</a>
+                                    <a class="dropdown-item" href="surgery_report.html">Surgery Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Fire Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_care_report.html">Patient Care Report</a>
+                                    <a class="dropdown-item" href="patrol_notes.html">Patrol Notes</a>
+                                    <a class="dropdown-item" href="fire_report.html">Fire Report</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col">
+                <div class="font-weight-bold mb-3 d-flex flex-wrap pb-2">
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <div class="m-1">
+                        <a class="btn btn-sm btn-primary" href="home.html">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header text-center text-white" style="background-color: #e4bc4b;">SURGERY REPORT
+                    </h5>
+                    <div class="card-body">
+                        <form>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="staff_name" class="col-sm-3 col-form-label text-sm-left">Full
+                                            Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="staff_name" name="staff_name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="rank" class="col-sm-3 col-form-label text-sm-left">Rank</label>
+                                        <div class="col-sm-9">
+                                            <select id="rank" name="rank" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Resident">Resident</option>
+                                                <option value="Senior Resident">Senior Resident</option>
+                                                <option value="Fellow">Fellow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="patient_name" class="col-sm-3 col-form-label text-sm-left">Patient
+                                            Name
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="patient_name" name="patient_name"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="age" class="col-sm-3 col-form-label text-sm-left">Age
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="age" name="age" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="gender" class="col-sm-3 col-form-label text-sm-left">Sex</label>
+                                        <div class="col-sm-9">
+                                            <select id="gender" name="gender" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="type" class="col-sm-3 col-form-label text-sm-left">Type</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="type" name="type" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="injury" class="col-sm-3 col-form-label text-sm-left">Injury</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="injury" name="injury" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="loc" class="col-sm-3 col-form-label text-sm-left">LOC</label>
+                                        <div class="col-sm-9">
+                                            <select id="loc" name="loc" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Alert">Alert</option>
+                                                <option value="Verbal">Verbal</option>
+                                                <option value="Pain Stimuli">Pain Stimuli</option>
+                                                <option value="Unresponsive">Unresponsive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="circulation"
+                                            class="col-sm-3 col-form-label text-sm-left">Circulation</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" id="circulation" name="circulation"
+                                                class="form-control" max="200" min="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="airway" class="col-sm-3 col-form-label text-sm-left">Airway</label>
+                                        <div class="col-sm-9">
+                                            <select id="airway" name="airway" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Abnormal">Abnormal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="breathing"
+                                            class="col-sm-3 col-form-label text-sm-left">Breathing</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" id="breathing" name="breathing" class="form-control"
+                                                max="30" min="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="medicine"
+                                            class="col-sm-3 col-form-label text-sm-left">Medicine</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="medicine" name="medicine" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="anesthesia_type"
+                                            class="col-sm-3 col-form-label text-sm-left">Anesthesia</label>
+                                        <div class="col-sm-9 row">
+                                            <select id="anesthesia_type" name="anesthesia_type"
+                                                class="form-control col-sm-6 ml-3 mr-2">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Local">Local</option>
+                                                <option value="General">General</option>
+                                            </select>
+                                            <input type="text" id="anesthesia_medicine" name="anesthesia_medicine"
+                                                class="form-control col-sm-5">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="summary" class="col-sm-2 col-form-label text-sm-left">Summary</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" id="summary" name="summary" cols="80" rows="5"
+                                        class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="status" class="col-sm-2 col-form-label text-sm-left">Recovery Status</label>
+                                <div class="col-sm-10">
+                                    <select id="status" name="status" class="form-control">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="Improved">Improved</option>
+                                        <option value="Worsened">Worsened</option>
+                                        <option value="Deceased">Deceased</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="date" class="col-sm-2 col-form-label text-sm-left">Date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="date" name="date" placeholder="dd/mm/yyyy"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="signature" class="col-sm-2 col-form-label text-sm-left">Signature</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="sign" name="sign" class="form-control" placeholder="Put [i]Signature[/i] or [img]Signature Link[/img]">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="screenshot" class="col-sm-2 col-form-label text-sm-left">Screenshot</label>
+                                <div class="col-sm-10" id="sc_container">
+                                    <div class="row">
+                                        <input type="text" id="screenshot[]" name="screenshot[]"
+                                            class="form-control col-sm-10 ml-3 mr-4"
+                                            placeholder="Link without [img][/img]">
+                                        <button class="btn btn-secondary col-sm-1" id="add">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 text-center">
+                                <div class="col-md-12">
+                                    <a href="#input_result" id="generate"
+                                        class="btn btn-block text-white font-weight-bold"
+                                        style="background-color: #d82832;">
+                                        GENERATE
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-0 mb-sm-3 mx-5" id="input_result">
+            <label for="result" class="col-sm-2 col-form-label text-sm-left">Result</label>
+            <div class="col-sm-10">
+                <textarea type="text" id="result" name="result" cols="80" rows="5" class="form-control"
+                    required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fluid-container text-center py-3 text-white" id="features" style="background-color: #d82832">
+            <p>© Copyright 2020 by ChrisAndreS</p>
+        </div>
+
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#add").click(function (e) {
+            e.preventDefault();
+            $("#sc_container").append(
+                '<div class="row mt-1"><input type="text" id="screenshot[]" name="screenshot[]" class="form-control col-sm-10 ml-3 mr-4" placeholder="Link without [img][/img]"><button class="btn btn-danger col-sm-1" id="delete">-</button></div>'
+                )
+        })
+
+        $("#sc_container").on("click", "#delete", function (e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+        })
+
+
+        $("#generate").click(function () {
+            var staff_name = $("#staff_name").val();
+            var rank = $("#rank").val();
+            var patient_name = $("#patient_name").val();
+            var age = $("#age").val();
+            var gender = $("#gender").val();
+            var type = $("#type").val();
+            var injury = $("#injury").val();
+            var loc = $("#loc").val();
+            var circulation = $("#circulation").val();
+            var airway = $("#airway").val();
+            var breathing = $("#breathing").val();
+            var medicine = $("#medicine").val();
+            var anesthesia_type = $("#anesthesia_type").val();
+            var anesthesia_medicine = $("#anesthesia_medicine").val();
+            var summary = $("#summary").val();
+            var status = $("#status").val();
+            var date = $("#date").val();
+            var sign = $("#sign").val();
+            var screenshot = $("input[id='screenshot[]']").map(function () {
+                return $(this).val();
+            }).get();
+
+            var screenshot1 = "";
+            for (var x = 0; x < screenshot.length; x++) {
+                screenshot2 = "[img]" + screenshot[x] + "[/img]\n";
+                screenshot1 = screenshot1 + screenshot2;
+            }
+
+            if (status = "Improved") {
+                status = "[color=#00BF00][b]" + status + "[/b][/color]";
+            } else if (status = "Worsened") {
+                status = "[color=#FF0000][b]" + status + "[/b][/color]";
+            } else if (status = "Deceased") {
+                status = "[color=#800000][b]" + status + "[/b][/color]";
+            }
+
+            var notes =
+                "[divbox=white][center][img]https://i.postimg.cc/RFd9JsR5/safdjg-2020-resized-2.png[/img][/center]\n[hr][/hr]\n[center][b][u][size=150]P[/size][size=137]ATIENT[/size] [size=150]H[/size][size=137]ISTORY[/size][/u][/b][/center]\n[u][size=140][b]P[/b][/size][size=125]HYSICIAN[/size] [size=140][b]I[/b][/size][size=125]NFORMATION[/size][/u]\n[b][size=105]Name:[/size][/b] " +
+                staff_name + "\n[b][size=105]Rank:[/size][/b] " + rank +
+                "\n[hr][/hr]\n[u][size=140][b]P[/b][/size][size=125]ATIENT[/size] [size=140][b]I[/b][/size][size=125]NFORMATION[/size][/u]\n[b][size=105]Name:[/size][/b] " +
+                patient_name + "\n[b][size=105]Age:[/size][/b] " + age +
+                "\n[b][size=105]Gender:[/size][/b] " + gender +
+                "\n[hr][/hr]\n[u][size=140][b]A[/b][/size][size=125]SSESSMENT[/size] [size=140][b]I[/b][/size][size=125]NFORMATION[/size][/u]\n[b][size=105]Type:[/size][/b] " +
+                type + "\n[b][size=105]Injury:[/size][/b] " + injury +
+                "\n[b][size=105]LOC on arrival:[/size][/b] " + loc +
+                "\n[b][size=105][u]Vitals on arrival[/u][/size][/b]\n[b]Circulation:[/b] " +
+                circulation + " / minute\n[b]Airway:[/b] " + airway + "\n[b]Breathing:[/b] " +
+                breathing + " L / minute\n[b][size=105]Medicines:[/size][/b] " + medicine +
+                "\n[b][size=105]Anesthesia:[/size][/b] " + anesthesia_type + " // [size=85]" +
+                anesthesia_medicine + "[/size]\n[b][size=105]Summary:[/size][/b]\n" + summary +
+                "\n[hr][/hr]\n[u][size=140][b]F[/b][/size][size=125]INAL[/size] [size=140][b]I[/b][/size][size=125]NFORMATION[/size][/u]\n[b][size=105]Recovery Status:[/size][/b] " +
+                status + "\n[right]" + date + "[/right]\n[right]" + sign +
+                "[/right]\n[altspoiler=SCREENSHOT]\n";
+            var notes2 = "[/altspoiler][/divbox]";
+
+            $("#result").text(notes + screenshot1 + notes2);
+
+        })
+
+    })
+</script>
+
+</html>

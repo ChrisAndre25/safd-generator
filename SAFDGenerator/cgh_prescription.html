@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFD Forum Generator</title>
+    <link rel="icon" href="assets/safd.png" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-other navbar-expand-sm">
+
+            <div class="container">
+                <a href="home.html" class="text-decoration-none">
+                    <h1 class="d-inline-block align-top mr-4 text-white font-weight-bold">SAFD</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse"
+                    aria-controls="contain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Hospital Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_information.html">Patient Information</a>
+                                    <a class="dropdown-item" href="asgh_prescription.html">Prescription</a>
+                                    <a class="dropdown-item" href="surgery_report.html">Surgery Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Fire Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_care_report.html">Patient Care Report</a>
+                                    <a class="dropdown-item" href="patrol_notes.html">Patrol Notes</a>
+                                    <a class="dropdown-item" href="fire_report.html">Fire Report</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col">
+                <div class="col">
+                    <div class="row">
+                        <div class="font-weight-bold mb-3 d-flex flex-wrap pb-2">
+                            <div class="d-flex flex-wrap justify-content-start">
+                                <div class="m-1">
+                                    <a class="btn btn-sm btn-primary" href="home.html">Back to Home</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offset-lg-9">
+                            <div class="font-weight-bold mb-3 d-flex flex-wrap pb-2">
+                                <div class="d-flex flex-wrap justify-content-end ml-4">
+                                    <div class="m-1">
+                                        <a class="btn btn-sm btn-danger" href="asgh_prescription.html">ASGH
+                                            Prescription</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header text-center text-white" style="background-color: #e4bc4b;">CGH PRESCRIPTION
+                    </h5>
+                    <div class="card-body">
+                        <form>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="prescriber"
+                                            class="col-sm-3 col-form-label text-sm-left">Prescriber</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="prescriber" name="prescriber" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="position" class="col-sm-3 col-form-label text-sm-left">Position
+                                            Held</label>
+                                        <div class="col-sm-9">
+                                            <select id="position" name="position" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Intern">Intern</option>
+                                                <option value="Resident">Resident</option>
+                                                <option value="Fellow">Fellow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="date" class="col-sm-3 col-form-label text-sm-left">Date
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="date" name="date" class="form-control"
+                                                placeholder="dd/mm/yyyy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="type" class="col-sm-3 col-form-label text-sm-left">Treatment
+                                            Type</label>
+                                        <div class="col-sm-9">
+                                            <select id="type" name="type" class="form-control">
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Inpatient">Inpatient (Rawat Inap)</option>
+                                                <option value="Outpatient">Outpatient (Rawat Jalan)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="signature" class="col-sm-3 col-form-label text-sm-left">Signature</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="sign" name="sign" class="form-control" placeholder="Put [i]Signature[/i] or [img]Signature Link[/img]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="medicine" class="col-sm-2 col-form-label text-sm-left">Medicine</label>
+                                <div class="col-sm-10" id="sc_container_med">
+                                    <div class="row">
+                                        <select id="medicine[]" name="medicine[]"
+                                            class="form-control col-sm-7 mr-3 ml-3">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="Arenipocetees 3.0">Arenipocetees 3.0</option>
+                                            <option value="Krarouvitis Plus">Krarouvitis Plus</option>
+                                            <option value="Lazulparilla 2.0">Lazulparilla 2.0</option>
+                                            <option value="Nanophytum Acid">Nanophytum Acid</option>
+                                            <option value="Olatsisymbrium 1.0">Olatsisymbrium 1.0</option>
+                                            <option value="Pyosisymbrium Extra">Pyosisymbrium Extra</option>
+                                        </select>
+                                        <input type="number" id="medicine_num[]" name="medicine_num[]"
+                                            class="form-control col-sm-3 mr-2" min="0" max="10" placeholder="Amount">
+                                        <button class="btn btn-secondary col-sm-1 ml-2" id="add_med">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 mb-sm-3">
+                                <label for="screenshot" class="col-sm-2 col-form-label text-sm-left">Screenshot</label>
+                                <div class="col-sm-10" id="sc_container">
+                                    <div class="row">
+                                        <input type="text" id="screenshot[]" name="screenshot[]"
+                                            class="form-control col-sm-10 ml-3 mr-4"
+                                            placeholder="Link without [img][/img]">
+                                        <button class="btn btn-secondary col-sm-1 ml-2" id="add">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 text-center">
+                                <div class="col-md-12">
+                                    <a href="#input_result" id="generate"
+                                        class="btn btn-block text-white font-weight-bold"
+                                        style="background-color: #d82832;">
+                                        GENERATE
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-0 mb-sm-3 mx-5" id="input_result">
+            <label for="result" class="col-sm-2 col-form-label text-sm-left">Result</label>
+            <div class="col-sm-10">
+                <textarea type="text" id="result" name="result" cols="80" rows="5" class="form-control"
+                    required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fluid-container text-center py-3 text-white" id="features" style="background-color: #d82832">
+            <p>© Copyright 2020 by ChrisAndreS</p>
+        </div>
+
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#add_med").click(function (e) {
+            e.preventDefault();
+            $("#sc_container_med").append(
+                '<div class="row mt-2"><select id="medicine[]" name="medicine[]" class="form-control col-sm-7 mr-3 ml-3"><option selected disabled>Choose...</option><option value="Arenipocetees 3.0">Arenipocetees 3.0</option><option value="Krarouvitis Plus">Krarouvitis Plus</option><option value="Lazulparilla 2.0">Lazulparilla 2.0</option><option value="Nanophytum Acid">Nanophytum Acid</option><option value="Olatsisymbrium 1.0">Olatsisymbrium 1.0</option><option value="Pyosisymbrium Extra">Pyosisymbrium Extra</option></select><input type="number" id="medicine_num[]" name="medicine_num[]" class="form-control col-sm-3 mr-3" min="0" max="10" placeholder="Amount"><button class="btn btn-danger col-sm-1" id="delete_med">-</button></div>'
+            );
+        })
+
+
+        $("#sc_container_med").on("click", "#delete_med", function (e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+        })
+
+        $("#add").click(function (e) {
+            e.preventDefault();
+            $("#sc_container").append(
+                '<div class="row mt-1"><input type="text" id="screenshot[]" name="screenshot[]" class="form-control col-sm-10 ml-3 mr-4" placeholder="Link without [img][/img]"><button class="btn btn-danger col-sm-1 ml-2" id="delete">-</button></div>'
+            )
+        })
+
+        $("#sc_container").on("click", "#delete", function (e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+        })
+
+        $("#generate").click(function () {
+            var prescriber = $("#prescriber").val();
+            var position = $("#position").val();
+            var date = $("#date").val();
+            var type = $("#type").val();
+            var sign = $("#sign").val();
+            var medicine = $("select[id='medicine[]']").map(function () {
+                return $(this).val();
+            }).get();
+            var medicine_num = $("input[id='medicine_num[]']").map(function () {
+                return $(this).val();
+            }).get();
+            var screenshot = $("input[id='screenshot[]']").map(function () {
+                return $(this).val();
+            }).get();
+
+            var medicine1 = "";
+            var len = medicine.length;
+            for (var x = 0; x < len; x++) {
+                if (medicine[x] == medicine[len - 1]) {
+                    medicine1 = medicine1 + medicine[x] + " (" + medicine_num[x] + ")"
+                } else {
+                    medicine1 = medicine1 + medicine[x] + " (" + medicine_num[x] + ") "
+                }
+            }
+            medicine1 = medicine1 + ", " + type;
+
+            var screenshot1 = "";
+            for (var x = 0; x < screenshot.length; x++) {
+                screenshot2 = "[img]" + screenshot[x] + "[/img]\n";
+                screenshot1 = screenshot1 + screenshot2;
+            }
+            console.log(len);
+
+            var notes =
+                "[divbox=#BDEDBB][hr][/hr][left][font=calibri][size=85][i]County General Hospital\n212 Jefferson Street, Los Santos\nSan Andreas, SA17023[/i][/size][/left] [hr][/hr][hr][/hr]\n[center][u][b]" +
+                medicine1 +
+                "[/b][/u][/center]\n[center][img]https://www.upload.ee/image/8551908/MIQgELi.png[/img][/center]\n[hr][/hr][hr][/hr]\n[size=85][b]Prescriber:[/b] [u]" +
+                prescriber + "[/u]\n[b]Position Held:[/b] [u]" + position + "[/u]\n[b]Date:[/b] [u]" +
+                date + "[/u][/size]\n[altspoiler=SCREENSHOT]";
+            var notes2 = "[/altspoiler]\n[right][b]Signature,[/b]\n" + sign + "[/right][/divbox]";
+
+            $("#result").text(notes + screenshot1 + notes2);
+
+        })
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFD Forum Generator</title>
+    <link rel="icon" href="assets/safd.png" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-other navbar-expand-sm">
+
+            <div class="container">
+                <a href="home.html" class="text-decoration-none">
+                    <h1 class="d-inline-block align-top mr-4 text-white font-weight-bold">SAFD</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse"
+                    aria-controls="contain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Hospital Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_information.html">Patient Information</a>
+                                    <a class="dropdown-item" href="asgh_prescription.html">Prescription</a>
+                                    <a class="dropdown-item" href="surgery_report.html">Surgery Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="navbut btn nav-link dropdown-toggle text-white font-weight-bold"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Fire Records
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="patient_care_report.html">Patient Care Report</a>
+                                    <a class="dropdown-item" href="patrol_notes.html">Patrol Notes</a>
+                                    <a class="dropdown-item" href="fire_report.html">Fire Report</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col">
+                <div class="font-weight-bold mb-3 d-flex flex-wrap pb-2">
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <div class="m-1">
+                        <a class="btn btn-sm btn-primary" href="home.html">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header text-center text-white" style="background-color: #e4bc4b;">PATIENT
+                        INFORMATION</h5>
+                    <div class="card-body">
+                        <form>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="name" class="col-sm-3 col-form-label text-sm-left">Patient
+                                            Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="sex" class="col-sm-3 col-form-label text-sm-left">Sex</label>
+                                        <div class="col-sm-9">
+                                            <select id="sex" name="sex" class="form-control" required>
+                                                <option selected disabled>Choose...</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="info" class="col-sm-3 col-form-label text-sm-left">Additional
+                                            Information
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="info" name="info" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="residence" class="col-sm-3 col-form-label text-sm-left">Residence
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="residence" name="residence" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="race" class="col-sm-3 col-form-label text-sm-left">Race /
+                                            Ethnicity</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="race" name="race" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="age" class="col-sm-3 col-form-label text-sm-left">Age</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="age" name="age" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="phone_number" class="col-sm-3 col-form-label text-sm-left">Phone
+                                            Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="phone_number" name="phone_number"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-0 mb-sm-3">
+                                        <label for="allergy"
+                                            class="col-sm-3 col-form-label text-sm-left">Allergies</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="allergy" name="allergy" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0 text-center">
+                                <div class="col-md-12">
+                                    <a href="#input_result" id="generate"
+                                        class="btn btn-block text-white font-weight-bold"
+                                        style="background-color: #d82832;">
+                                        GENERATE
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-0 mb-sm-3 mx-5" id="input_result">
+            <label for="result" class="col-sm-2 col-form-label text-sm-left">Result</label>
+            <div class="col-sm-10">
+                <textarea type="text" id="result" name="result" cols="80" rows="5" class="form-control"
+                    required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fluid-container text-center py-3 text-white" id="features" style="background-color: #d82832">
+            <p>© Copyright 2020 by ChrisAndreS</p>
+        </div>
+
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#generate").click(function () {
+            var name = $("#name").val();
+            var sex = $("#sex").val();
+            var info = $("#info").val();
+            var residence = $("#residence").val();
+            var race = $("#race").val();
+            var age = $("#age").val();
+            var phone_number = $("#phone_number").val();
+            var allergy = $("#allergy").val();
+
+            if (info == "" || info == "-" || info == "None" || info == "none" || info == "NONE" ||
+                info == "Unknown" || info == "unknown") {
+                info = "N/A";
+            }
+            if (residence == "" || residence == "-" || residence == "None" || residence == "none" ||
+                residence == "NONE" || residence == "Unknown" || residence == "unknown") {
+                residence = "N/A";
+            }
+            if (race == "" || race == "-" || race == "None" || race == "none" || race == "NONE" ||
+                race == "Unknown" || race == "unknown") {
+                race = "N/A";
+            }
+            if (age == "" || age == "-" || age == "None" || age == "none" || age == "NONE" || age ==
+                "Unknown" || age == "unknown") {
+                age = "N/A";
+            }
+            if (phone_number == "" || phone_number == "-" || phone_number == "None" || phone_number ==
+                "none" || phone_number == "NONE" || phone_number == "Unknown" || phone_number ==
+                "unknown") {
+                phone_number = "N/A";
+            }
+            if (allergy == "" || allergy == "-" || allergy == "None" || allergy == "none" || allergy ==
+                "NONE" || allergy == "Unknown" || allergy == "unknown") {
+                allergy = "N/A";
+            }
+
+            var notes =
+                "[divbox=white][hr][/hr]\n[center][img]https://i.postimg.cc/RFd9JsR5/safdjg-2020-resized-2.png[/img][/center]\n[center][b][u][size=150]P[/size][size=137]ATIENT[/size] [size=150]R[/size][size=137]ECORD[/size][/u][/b][/center]\n[u][size=140][b]P[/b][/size][size=125]ATIENT[/size] [size=140][b]I[/b][/size][size=125]NFORMATION[/size][/u]\n[b][size=105]Name:[/size][/b] " +
+                name + "\n[b][size=105]Sex:[/size][/b] " + sex +
+                "\n[b][size=105]Additional Information:[/size][/b] " + info +
+                "\n[i]This section DOES NOT need to be filled in and can be filled in at any point from any visit if the physician wishes to update the file.[/i]\n[list]\n[b]Residence:[/b] " +
+                residence + "\n[b]Race/Ethnicity:[/b] " + race + "\n[b]Age:[/b] " + age +
+                "\n[b]Phone Number: [/b] " + phone_number + "\n[b]Allergies:[/b] " + allergy +
+                "\n[/list]\n[hr][/hr][/divbox]";
+            $("#result").text(notes);
+
+        })
+
+    })
+</script>
+
+</html>

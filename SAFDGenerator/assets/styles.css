@@ -1,0 +1,81 @@
+
+.button:hover {
+    background-color: #8DDDF5;
+}
+
+.button {
+    background-color: #15C0F4;
+}
+
+.homeButton {
+    background-color: #d82832;
+    color: white;
+    transition: 200ms ease;
+}
+
+.homeButton:hover {
+    background-color: #d82832;
+    color: white;
+    transform: scale(1.07);
+}
+
+
+.navbut {
+    background: transparent;
+}
+
+.navbut:hover {
+    background-color: #f8b9bc;
+}
+
+.navbar-gradient {
+    background-image: linear-gradient(115deg, #62C7E3,#9E95B8,#877e9f);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+}
+
+.navbar-dark {
+    transition: 250ms ease;
+    background: transparent !important;
+}
+
+.navbar-dark .scrolled {
+    background: #d82832 !important;
+}
+
+.navbar-other {
+    background: #d82832 !important;
+}
+
+.dropdown-item:hover{
+    background-color: #e9555c;
+}
+
+
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url(office.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+.feature:hover {
+    transform: scale(1.07);
+}
+
+.feature {
+    transition: 200ms ease;
+}
+
+.feature-title {
+    transition: 200ms ease;
+}
+
+.feature-title:hover {
+    transform: scale(1.03);
+}
